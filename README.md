@@ -14,7 +14,15 @@ License: GPL-3.0-or-later
 
 ## Quick Start
 
-1. Install dependencies:
+1. Install (choose one):
+
+From PyPI:
+
+```bash
+pip install mediacatalog
+```
+
+From source:
 
 ```bash
 python -m venv .venv

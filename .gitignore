@@ -5,3 +5,4 @@ output/
 movies.csv
 *.pyc
 __pycache__/
+*.egg-info/
