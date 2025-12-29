@@ -108,6 +108,8 @@ python -m build
 python -m twine upload dist/*
 ```
 
+Automated release: push a tag like `v0.1.1` and GitHub Actions will build and publish.
+
 Install after publishing:
 
 ```bash

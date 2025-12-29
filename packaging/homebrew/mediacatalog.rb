@@ -3,7 +3,7 @@ class Mediacatalog < Formula
 
   desc "Generate printable A5 pages and EPUBs for a media catalog from IMDb IDs"
   homepage "https://github.com/YOUR_GITHUB_USER/media-catalog"
-  url "https://github.com/YOUR_GITHUB_USER/media-catalog/archive/refs/tags/v0.1.0.tar.gz"
+  url "https://github.com/YOUR_GITHUB_USER/media-catalog/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "REPLACE_WITH_TARBALL_SHA256"
   license "GPL-3.0-or-later"
 
