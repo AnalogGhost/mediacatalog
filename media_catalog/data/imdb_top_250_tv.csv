@@ -1,0 +1,251 @@
+title,year,rank,imdb_id
+Breaking Bad,2008,1,tt0903747
+Planet Earth II,2016,2,tt5491994
+Planet Earth,2006,3,tt0795176
+Band of Brothers,2001,4,tt0185906
+Chernobyl,2019,5,tt7366338
+The Wire,2002,6,tt0306414
+Avatar: The Last Airbender,2005,7,tt0417299
+The Sopranos,1999,8,tt0141842
+Blue Planet II,2017,9,tt6769208
+Cosmos: A Spacetime Odyssey,2014,10,tt2395695
+Cosmos,1980,11,tt0081846
+Our Planet,2019,12,tt9253866
+Game of Thrones,2011,13,tt0944947
+Bluey,2018,14,tt7678620
+The World at War,1973,15,tt0071075
+Fullmetal Alchemist: Brotherhood,2009,16,tt1355642
+Attack on Titan,2013,17,tt2560140
+Life,2009,18,tt1533395
+The Last Dance,2020,19,tt8420184
+The Twilight Zone,1959,20,tt0052520
+Rick and Morty,2013,21,tt2861424
+The Vietnam War,2017,22,tt1877514
+Sherlock,2010,23,tt1475582
+Batman: The Animated Series,1992,24,tt0103359
+Better Call Saul,2015,25,tt3032476
+Arcane,2021,26,tt11126994
+The Office,2005,27,tt0386676
+The Blue Planet,2001,28,tt0296310
+Dexter: Resurrection,2025,29,tt33043892
+Clarkson's Farm,2021,30,tt10541088
+Scam 1992: The Harshad Mehta Story,2020,31,tt12392504
+Hunter x Hunter,2011,32,tt2098220
+Frozen Planet,2011,33,tt2092588
+Human Planet,2011,34,tt1806234
+Only Fools and Horses,1981,35,tt0081912
+The Civil War,1990,36,tt0098769
+Firefly,2002,37,tt0303461
+Death Note,2006,38,tt0877057
+As If,2021,39,tt13675832
+Gravity Falls,2012,40,tt1865718
+The Pitt,2025,41,tt31938062
+Seinfeld,1989,42,tt0098904
+Dekalog,1989,43,tt0092337
+The Beatles: Get Back,2021,44,tt9735318
+Frieren: Beyond Journey's End,2023,45,tt22248376
+Taskmaster,2015,46,tt4934214
+Cowboy Bebop,1998,47,tt0213338
+Nathan for You,2013,48,tt2297757
+True Detective,2014,49,tt2356777
+Fargo,2014,50,tt2802850
+Apocalypse: The Second World War,2009,51,tt1508238
+Persona,2018,52,tt7920978
+Africa,2013,53,tt2571774
+When They See Us,2019,54,tt7137906
+Friends,1994,55,tt0108778
+One Piece,1999,56,tt0388629
+The West Wing,1999,57,tt0200276
+Last Week Tonight with John Oliver,2014,58,tt3530232
+It's Always Sunny in Philadelphia,2005,59,tt0472954
+TVF Pitchers,2015,60,tt4742876
+Succession,2018,61,tt7660850
+Bleach: Thousand-Year Blood War,2022,62,tt14986406
+Curb Your Enthusiasm,2000,63,tt0264235
+Monty Python's Flying Circus,1969,64,tt0063929
+Das Boot,1985,65,tt0081834
+When Life Gives You Tangerines,2025,66,tt26471411
+BoJack Horseman,2014,67,tt3398228
+The Chosen,2017,68,tt5622316
+Panchayat,2020,69,tt12004706
+Fawlty Towers,1975,70,tt0072500
+Dragon Ball Z,1996,71,tt0214341
+Vinland Saga,2019,72,tt10233448
+Blackadder Goes Forth,1989,73,tt0096548
+Leyla and Mecnun,2011,74,tt1831164
+Gullak,2019,75,tt10530900
+Dragon Ball Z,1989,76,tt0121220
+Freaks and Geeks,1999,77,tt0193676
+Pride and Prejudice,1995,78,tt0112130
+Chappelle's Show,2003,79,tt0353049
+Twin Peaks,1990,80,tt0098936
+Narcos,2015,81,tt2707408
+"I, Claudius",1976,82,tt0074006
+Reply 1988,2015,83,tt5182866
+South Park,1997,84,tt0121955
+Kota Factory,2019,85,tt9432978
+Over the Garden Wall,2014,86,tt3718778
+Ted Lasso,2020,87,tt10986410
+Berserk,1997,88,tt0318871
+Steins;Gate,2011,89,tt1910272
+Black Mirror,2011,90,tt2085059
+My Mister,2018,91,tt7923710
+Peaky Blinders,2013,92,tt2442560
+Six Feet Under,2001,93,tt0248654
+Rome,2005,94,tt0384766
+Oz,1997,95,tt0118421
+Dark,2017,96,tt5753856
+X-Men '97,2024,97,tt16026746
+The Grand Tour,2016,98,tt5712554
+Downton Abbey,2010,99,tt1606375
+The Shield,2002,100,tt0286486
+Fleabag,2016,101,tt5687612
+Monster,2004,102,tt0434706
+Battlestar Galactica,2004,103,tt0407362
+Naruto: Shippuden,2007,104,tt0988824
+Peep Show,2003,105,tt0387764
+Mad Men,2007,106,tt0804503
+Star Trek: The Next Generation,1987,107,tt0092455
+Invincible,2021,108,tt6741278
+Blue Eye Samurai,2023,109,tt13309742
+Still Game,2002,110,tt0281491
+The Simpsons,1989,111,tt0096697
+Heated Rivalry,2025,112,tt35495073
+House,2004,113,tt0412142
+Severance,2022,114,tt11280740
+Justice League Unlimited,2004,115,tt6025022
+The Adventures of Sherlock Holmes,1984,116,tt0086661
+Mahabharat,1988,117,tt0158417
+Line of Duty,2012,118,tt2303687
+Arrested Development,2003,119,tt0367279
+Top Gear,2002,120,tt1628033
+Friday Night Lights,2006,121,tt0758745
+How to with John Wilson,2020,122,tt10801534
+The Marvelous Mrs. Maisel,2017,123,tt5788792
+The Thick of It,2005,124,tt0459159
+Stranger Things,2016,125,tt4574334
+This Is Us,2016,126,tt5555260
+Code Geass,2006,127,tt0994314
+Father Ted,1995,128,tt0111958
+The Boys,2019,129,tt1190634
+Aspirants,2021,130,tt14392248
+Behzat Ç: An Ankara Detective Story,2010,131,tt1795096
+Ramayan,1987,132,tt0268093
+One Punch Man,2015,133,tt4508902
+Adventure Time,2010,134,tt1305826
+Fighting Spirit,2000,135,tt0481256
+Dexter,2006,136,tt0773262
+1883,2021,137,tt13991232
+Mr Inbetween,2018,138,tt7472896
+Parks and Recreation,2009,139,tt1266020
+The X-Files,1993,140,tt0106179
+Sarabhai V/S Sarabhai,2004,141,tt1518542
+Atlanta,2016,142,tt4288182
+Deadwood,2004,143,tt0348914
+The Crown,2016,144,tt4786824
+House of Cards,2013,145,tt1856010
+The Mandalorian,2019,146,tt8111088
+It's a Sin,2021,147,tt9140342
+Daredevil,2015,148,tt3322312
+Poirot,1989,149,tt0094525
+The Bridge,2011,150,tt1733785
+Mindhunter,2017,151,tt5290382
+Primal,2019,152,tt10332508
+Lonesome Dove,1989,153,tt0096639
+Mr. Bean,1990,154,tt0096657
+Blackadder II,1986,155,tt0088484
+Haikyu!!,2014,156,tt3398540
+Shōgun,2024,157,tt2788316
+The Offer,2022,158,tt13111040
+Crash Landing on You,2019,159,tt10850932
+The Return of Sherlock Holmes,1986,160,tt0090509
+Pose,2018,161,tt7562112
+El Chavo del Ocho,1972,162,tt0229889
+Yes Minister,1980,163,tt0080306
+The Bureau,2015,164,tt4063800
+Gomorrah,2014,165,tt2049116
+The Jinx: The Life and Deaths of Robert Durst,2015,166,tt4299972
+The Penguin,2024,167,tt15435876
+Greatest Events of WWII in Colour,2019,168,tt9103932
+Blackadder the Third,1987,169,tt0092324
+Anne with an E,2017,170,tt5421602
+Andor,2022,171,tt9253284
+Critical Role,2015,172,tt4834232
+The Newsroom,2012,173,tt1870479
+Scavengers Reign,2023,174,tt21056886
+Homicide: Life on the Street,1993,175,tt0106028
+Boardwalk Empire,2010,176,tt0979432
+Archer,2009,177,tt1486217
+Dopesick,2021,178,tt9174558
+Mystery Science Theater 3000,1988,179,tt0094517
+Yeh Meri Family,2018,180,tt8595766
+Justified,2010,181,tt1489428
+The Bugs Bunny Show,1960,182,tt0053488
+QI,2003,183,tt0380136
+Demon Slayer: Kimetsu no Yaiba,2019,184,tt9335498
+Young Justice,2010,185,tt1641384
+Battlestar Galactica,2003,186,tt0314979
+Endeavour,2012,187,tt2701582
+Dragon Ball,1986,188,tt0088509
+What We Do in the Shadows,2019,189,tt7908628
+Justice League,2001,190,tt0275137
+"Yes, Prime Minister",1986,191,tt0086831
+The Venture Bros.,2003,192,tt0417373
+The Haunting of Hill House,2018,193,tt6763664
+Dragon Ball,1995,194,tt0280249
+Samurai Champloo,2004,195,tt0423731
+Black Sun,2017,196,tt6108262
+Flight of the Conchords,2007,197,tt0863046
+The Family Man,2019,198,tt9544034
+The IT Crowd,2006,199,tt0487831
+Rocket Boys,2022,200,tt13868972
+The Rehearsal,2022,201,tt10802170
+The Queen's Gambit,2020,202,tt10048342
+Coupling,2000,203,tt0237123
+Regular Show,2010,204,tt1710308
+I'm Alan Partridge,1997,205,tt0129690
+Mr. Robot,2015,206,tt4158110
+Samurai Jack,2001,207,tt0278238
+Detectorists,2014,208,tt4082744
+Happy Valley,2014,209,tt3428912
+Ezel,2009,210,tt1534360
+Long Way Round,2004,211,tt0403778
+Making a Murderer,2015,212,tt5189670
+Adventure Time: Fionna & Cake,2023,213,tt15248880
+Derry Girls,2018,214,tt7120662
+Mob Psycho 100,2016,215,tt5897304
+Twin Peaks,2017,216,tt4093826
+Spaced,1999,217,tt0187664
+Impractical Jokers,2011,218,tt2100976
+Solo Leveling,2024,219,tt21209876
+Sons of Anarchy,2008,220,tt1124373
+Whose Line Is It Anyway?,1998,221,tt0163507
+Mind Your Language,1977,222,tt0075537
+Yellowstone,2018,223,tt4236770
+The Eric Andre Show,2012,224,tt2244495
+Louie,2010,225,tt1492966
+Through the Wormhole,2010,226,tt1513168
+Neon Genesis Evangelion,1995,227,tt0112159
+Alchemy of Souls,2022,228,tt20859920
+All Creatures Great & Small,2020,229,tt10590066
+Trailer Park Boys,2001,230,tt0290988
+The Office,2001,231,tt0290978
+My Brilliant Friend,2018,232,tt7278862
+Jujutsu Kaisen,2020,233,tt12343534
+The Last of Us,2023,234,tt3581920
+Gintama,2005,235,tt0988818
+The Bear,2022,236,tt14452776
+The Great British Baking Show,2010,237,tt1877368
+Schitt's Creek,2015,238,tt3526078
+Silicon Valley,2014,239,tt2575988
+Brass Eye,1997,240,tt0118273
+Rurouni Kenshin: Trust & Betrayal,1999,241,tt0203082
+The Expanse,2015,242,tt3230854
+Fullmetal Alchemist,2003,243,tt0421357
+Futurama,1999,244,tt0149460
+Avrupa Yakasi,2004,245,tt0421291
+The Boondocks,2005,246,tt0373732
+Hannibal,2013,247,tt2243973
+Foyle's War,2002,248,tt0310455
+Skam,2015,249,tt5288312
+Your Lie in April,2014,250,tt3895150

@@ -1,0 +1,1 @@
+"""MediaCatalog PDF/EPUB generator."""

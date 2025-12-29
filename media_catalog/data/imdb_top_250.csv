@@ -1,0 +1,251 @@
+title,year,rank,imdb_id
+The Shawshank Redemption,1994,1,tt0111161
+The Godfather,1972,2,tt0068646
+The Dark Knight,2008,3,tt0468569
+The Godfather Part II,1974,4,tt0071562
+12 Angry Men,1957,5,tt0050083
+The Lord of the Rings: The Return of the King,2003,6,tt0167260
+Schindler's List,1993,7,tt0108052
+The Lord of the Rings: The Fellowship of the Ring,2001,8,tt0120737
+Pulp Fiction,1994,9,tt0110912
+"The Good, the Bad and the Ugly",1966,10,tt0060196
+The Lord of the Rings: The Two Towers,2002,11,tt0167261
+Forrest Gump,1994,12,tt0109830
+Fight Club,1999,13,tt0137523
+Inception,2010,14,tt1375666
+Star Wars: Episode V - The Empire Strikes Back,1980,15,tt0080684
+The Matrix,1999,16,tt0133093
+Goodfellas,1990,17,tt0099685
+Interstellar,2014,18,tt0816692
+One Flew Over the Cuckoo's Nest,1975,19,tt0073486
+Se7en,1995,20,tt0114369
+It's a Wonderful Life,1946,21,tt0038650
+The Silence of the Lambs,1991,22,tt0102926
+Seven Samurai,1954,23,tt0047478
+Saving Private Ryan,1998,24,tt0120815
+The Green Mile,1999,25,tt0120689
+City of God,2002,26,tt0317248
+Life Is Beautiful,1997,27,tt0118799
+Terminator 2: Judgment Day,1991,28,tt0103064
+Star Wars: Episode IV - A New Hope,1977,29,tt0076759
+Back to the Future,1985,30,tt0088763
+Spirited Away,2001,31,tt0245429
+The Pianist,2002,32,tt0253474
+Gladiator,2000,33,tt0172495
+Parasite,2019,34,tt6751668
+Psycho,1960,35,tt0054215
+Grave of the Fireflies,1988,36,tt0095327
+The Lion King,1994,37,tt0110357
+Harakiri,1962,38,tt0056058
+The Departed,2006,39,tt0407887
+Whiplash,2014,40,tt2582802
+The Prestige,2006,41,tt0482571
+American History X,1998,42,tt0120586
+Léon: The Professional,1994,43,tt0110413
+Spider-Man: Across the Spider-Verse,2023,44,tt9362722
+Cinema Paradiso,1988,45,tt0095765
+Casablanca,1942,46,tt0034583
+The Intouchables,2011,47,tt1675434
+The Usual Suspects,1995,48,tt0114814
+Alien,1979,49,tt0078748
+Modern Times,1936,50,tt0027977
+Rear Window,1954,51,tt0047396
+Django Unchained,2012,52,tt1853728
+Once Upon a Time in the West,1968,53,tt0064116
+City Lights,1931,54,tt0021749
+Apocalypse Now,1979,55,tt0078788
+WALL·E,2008,56,tt0910970
+Memento,2000,57,tt0209144
+Dune: Part Two,2024,58,tt15239678
+Raiders of the Lost Ark,1981,59,tt0082971
+Avengers: Infinity War,2018,60,tt4154756
+The Lives of Others,2006,61,tt0405094
+Spider-Man: Into the Spider-Verse,2018,62,tt4633694
+Sunset Boulevard,1950,63,tt0043014
+Witness for the Prosecution,1957,64,tt0051201
+Paths of Glory,1957,65,tt0050825
+The Shining,1980,66,tt0081505
+The Great Dictator,1940,67,tt0032553
+Inglourious Basterds,2009,68,tt0361748
+12th Fail,2023,69,tt23849204
+Aliens,1986,70,tt0090605
+High and Low,1963,71,tt0057565
+The Dark Knight Rises,2012,72,tt1345836
+Coco,2017,73,tt2380307
+Avengers: Endgame,2019,74,tt4154796
+Good Will Hunting,1997,75,tt0119217
+Amadeus,1984,76,tt0086879
+Toy Story,1995,77,tt0114709
+Your Name.,2016,78,tt5311514
+Oldboy,2003,79,tt0364569
+Das Boot,1981,80,tt0082096
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,1964,81,tt0057012
+Braveheart,1995,82,tt0112573
+Princess Mononoke,1997,83,tt0119698
+American Beauty,1999,84,tt0169547
+3 Idiots,2009,85,tt1187043
+Capernaum,2018,86,tt8267604
+Joker,2019,87,tt7286456
+Singin' in the Rain,1952,88,tt0045152
+Once Upon a Time in America,1984,89,tt0087843
+Come and See,1985,90,tt0091251
+Requiem for a Dream,2000,91,tt0180093
+Star Wars: Episode VI - Return of the Jedi,1983,92,tt0086190
+Toy Story 3,2010,93,tt0435761
+The Hunt,2012,94,tt2106476
+Ikiru,1952,95,tt0044741
+Eternal Sunshine of the Spotless Mind,2004,96,tt0338013
+Incendies,2010,97,tt1255953
+The Apartment,1960,98,tt0053604
+Lawrence of Arabia,1962,99,tt0056172
+2001: A Space Odyssey,1968,100,tt0062622
+Reservoir Dogs,1992,101,tt0105236
+Scarface,1983,102,tt0086250
+Heat,1995,103,tt0113277
+Double Indemnity,1944,104,tt0036775
+Up,2009,105,tt1049413
+North by Northwest,1959,106,tt0053125
+Full Metal Jacket,1987,107,tt0093058
+M,1931,108,tt0022100
+Like Stars on Earth,2007,109,tt0986264
+Citizen Kane,1941,110,tt0033467
+Amélie,2001,111,tt0211915
+Vertigo,1958,112,tt0052357
+A Separation,2011,113,tt1832382
+Die Hard,1988,114,tt0095016
+To Kill a Mockingbird,1962,115,tt0056592
+The Sting,1973,116,tt0070735
+Indiana Jones and the Last Crusade,1989,117,tt0097576
+A Clockwork Orange,1971,118,tt0066921
+Metropolis,1927,119,tt0017136
+Snatch,2000,120,tt0208092
+1917,2019,121,tt8579674
+L.A. Confidential,1997,122,tt0119488
+Downfall,2004,123,tt0363163
+Bicycle Thieves,1948,124,tt0040522
+Oppenheimer,2023,125,tt15398776
+Dangal,2016,126,tt5074352
+The Wolf of Wall Street,2013,127,tt0993846
+The Truman Show,1998,128,tt0120382
+Green Book,2018,129,tt6966692
+Batman Begins,2005,130,tt0372784
+Hamilton,2020,131,tt8503618
+Shutter Island,2010,132,tt1130884
+Judgment at Nuremberg,1961,133,tt0055031
+Taxi Driver,1976,134,tt0075314
+For a Few Dollars More,1965,135,tt0059578
+Some Like It Hot,1959,136,tt0053291
+Jurassic Park,1993,137,tt0107290
+There Will Be Blood,2007,138,tt0469494
+The Kid,1921,139,tt0012349
+The Father,2020,140,tt10272386
+All About Eve,1950,141,tt0042192
+The Sixth Sense,1999,142,tt0167404
+Ran,1985,143,tt0089881
+Casino,1995,144,tt0112641
+No Country for Old Men,2007,145,tt0477348
+The Thing,1982,146,tt0084787
+Top Gun: Maverick,2022,147,tt1745960
+Prisoners,2013,148,tt1392214
+Pan's Labyrinth,2006,149,tt0457430
+Unforgiven,1992,150,tt0105695
+Kill Bill: Vol. 1,2003,151,tt0266697
+The Chaos Class Failed the Class,1975,152,tt0252488
+A Beautiful Mind,2001,153,tt0268978
+The Treasure of the Sierra Madre,1948,154,tt0040897
+Howl's Moving Castle,2004,155,tt0347149
+Finding Nemo,2003,156,tt0266543
+Yojimbo,1961,157,tt0055630
+The Great Escape,1963,158,tt0057115
+Klaus,2019,159,tt4729430
+Monty Python and the Holy Grail,1975,160,tt0071853
+The Best of Youth,2003,161,tt0346336
+The Elephant Man,1980,162,tt0080678
+Dial M for Murder,1954,163,tt0046912
+Gone with the Wind,1939,164,tt0031381
+The Secret in Their Eyes,2009,165,tt1305806
+Chinatown,1974,166,tt0071315
+"Lock, Stock and Two Smoking Barrels",1998,167,tt0120735
+Demon Slayer: Kimetsu no Yaiba Infinity Castle,2025,168,tt32820897
+V for Vendetta,2005,169,tt0434409
+Inside Out,2015,170,tt2096673
+Rashomon,1950,171,tt0042876
+Catch Me If You Can,2002,172,tt0264464
+"Three Billboards Outside Ebbing, Missouri",2017,173,tt5027774
+Trainspotting,1996,174,tt0117951
+The Bridge on the River Kwai,1957,175,tt0050212
+Harry Potter and the Deathly Hallows: Part 2,2011,176,tt1201607
+Fargo,1996,177,tt0116282
+Raging Bull,1980,178,tt0081398
+Dead Poets Society,1989,179,tt0097165
+Warrior,2011,180,tt1291584
+The Wild Robot,2024,181,tt29623480
+Barry Lyndon,1975,182,tt0072684
+Ben-Hur,1959,183,tt0052618
+Million Dollar Baby,2004,184,tt0405159
+Mad Max: Fury Road,2015,185,tt1392190
+Gran Torino,2008,186,tt1205489
+My Neighbor Totoro,1988,187,tt0096283
+Children of Heaven,1997,188,tt0118849
+Hacksaw Ridge,2016,189,tt2119532
+The Grand Budapest Hotel,2014,190,tt2278388
+12 Years a Slave,2013,191,tt2024544
+Before Sunrise,1995,192,tt0112471
+Blade Runner,1982,193,tt0083658
+Ratatouille,2007,194,tt0382932
+Memories of Murder,2003,195,tt0353969
+Spider-Man: No Way Home,2021,196,tt10872600
+How to Train Your Dragon,2010,197,tt0892769
+Gone Girl,2014,198,tt2267998
+"Monsters, Inc.",2001,199,tt0198781
+Jaws,1975,200,tt0073195
+In the Name of the Father,1993,201,tt0107207
+Ford v Ferrari,2019,202,tt1950186
+The Gold Rush,1925,203,tt0015864
+Wild Tales,2014,204,tt3011894
+Sherlock Jr.,1924,205,tt0015324
+Mary and Max,2009,206,tt0978762
+The Deer Hunter,1978,207,tt0077416
+The Wages of Fear,1953,208,tt0046268
+The General,1926,209,tt0017925
+Logan,2017,210,tt3315342
+Mr. Smith Goes to Washington,1939,211,tt0031679
+Rocky,1976,212,tt0075148
+On the Waterfront,1954,213,tt0047296
+Tokyo Story,1953,214,tt0046438
+Wild Strawberries,1957,215,tt0050986
+Pirates of the Caribbean: The Curse of the Black Pearl,2003,216,tt0325980
+Spotlight,2015,217,tt1895587
+The Third Man,1949,218,tt0041959
+La haine,1995,219,tt0113247
+Maharaja,2024,220,tt26548265
+Jai Bhim,2021,221,tt15097216
+The Terminator,1984,222,tt0088247
+The Big Lebowski,1998,223,tt0118715
+The Sound of Music,1965,224,tt0059742
+A Silent Voice: The Movie,2016,225,tt5323662
+The Best Years of Our Lives,1946,226,tt0036868
+The Seventh Seal,1957,227,tt0050976
+Room,2015,228,tt3170832
+Hotel Rwanda,2004,229,tt0395169
+Platoon,1986,230,tt0091763
+Before Sunset,2004,231,tt0381681
+The Incredibles,2004,232,tt0317705
+Chainsaw Man - The Movie: Reze Arc,2025,233,tt30472557
+The Exorcist,1973,234,tt0070047
+Hachi: A Dog's Tale,2009,235,tt1028532
+Rush,2013,236,tt1979320
+The Wizard of Oz,1939,237,tt0032138
+Stand by Me,1986,238,tt0092005
+The Passion of Joan of Arc,1928,239,tt0019254
+The Iron Giant,1999,240,tt0129167
+My Father and My Son,2005,241,tt0476735
+The Battle of Algiers,1966,242,tt0058946
+The Handmaiden,2016,243,tt4016934
+Network,1976,244,tt0074958
+Gangs of Wasseypur,2012,245,tt1954470
+Drishyam,2015,246,tt4430212
+Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train,2020,247,tt11032374
+The Grapes of Wrath,1940,248,tt0032551
+Lost Ladies,2023,249,tt21626284
+To Be or Not to Be,1942,250,tt0035446

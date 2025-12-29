@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include movies.example.csv
+include samples/catalog.pdf
+include samples/catalog.epub
+recursive-include media_catalog/data *.csv
