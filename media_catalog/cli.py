@@ -1,5 +1,6 @@
 import argparse
 import csv
+import json
 import os
 import re
 from pathlib import Path
@@ -9,7 +10,7 @@ from dotenv import load_dotenv
 
 from media_catalog.epub import build_epub
 from media_catalog.merge import merge_pdfs
-from media_catalog.omdb import fetch_movie, fetch_series_episodes_count
+from media_catalog.omdb import fetch_movie, fetch_series_episodes_count, search_omdb
 from media_catalog.render import render_movie_page, render_separator_page
 from media_catalog.util import ensure_dir, parse_imdb_id, slugify_title
 
@@ -119,59 +120,92 @@ def build_parser():
     parser = argparse.ArgumentParser(
         description="Generate A5 movie catalog pages from a CSV of IMDb links/IDs."
     )
-    parser.add_argument("--input", required=True, help="Path to input CSV")
-    parser.add_argument(
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    gen = subparsers.add_parser("generate", help="Generate catalog PDFs/EPUB from a CSV")
+    gen.add_argument("--input", required=True, help="Path to input CSV")
+    gen.add_argument(
         "--imdb-column",
         default="imdb",
         help="CSV column containing IMDb link or ID (default: imdb)",
     )
-    parser.add_argument(
+    gen.add_argument(
         "--output-dir",
         default="output",
         help="Directory to write PDFs (default: output)",
     )
-    parser.add_argument(
+    gen.add_argument(
         "--pages-dir",
         default="pages",
         help="Subdirectory for per-movie PDFs (default: pages)",
     )
-    parser.add_argument(
+    gen.add_argument(
         "--combined",
         default="catalog.pdf",
         help="Combined PDF filename (default: catalog.pdf)",
     )
-    parser.add_argument(
+    gen.add_argument(
         "--epub",
         action="store_true",
         help="Generate an EPUB alongside the PDF output",
     )
-    parser.add_argument(
+    gen.add_argument(
         "--epub-name",
         default="catalog.epub",
         help="EPUB filename (default: catalog.epub)",
     )
-    parser.add_argument(
+    gen.add_argument(
         "--left-margin-mm",
         type=float,
         default=25.0,
         help="Left margin in mm for hole punch clearance (default: 25)",
     )
-    parser.add_argument(
+    gen.add_argument(
         "--no-poster",
         action="store_true",
         help="Skip downloading posters",
     )
-    parser.add_argument(
+    gen.add_argument(
         "--cache-dir",
         default=".cache/omdb",
         help="Directory to cache OMDb responses (default: .cache/omdb)",
     )
-    parser.add_argument(
+    gen.add_argument(
         "--no-cache",
         action="store_true",
         help="Disable cache reads and writes",
     )
+    gen.add_argument(
+        "--overrides-dir",
+        default=".overrides",
+        help="Directory of manual override JSON files named <imdb_id>.json (default: .overrides)",
+    )
+
+    srch = subparsers.add_parser("search", help="Search OMDb by title")
+    srch.add_argument("query", help="Title to search for")
+    srch.add_argument("--year", help="Optional year to narrow results")
+
     return parser
+
+
+def load_override(overrides_dir, imdb_id):
+    path = Path(overrides_dir) / f"{imdb_id}.json"
+    if not path.exists():
+        return None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    data.setdefault("imdbID", imdb_id)
+    return data
+
+
+def cmd_search(args, api_key):
+    results = search_omdb(args.query, api_key, year=args.year)
+    if not results:
+        print(f"No results found on OMDb for '{args.query}'")
+        return
+    print(f"{'IMDb ID':<12} {'Year':<6} {'Type':<8} Title")
+    print("-" * 60)
+    for r in results:
+        print(f"{r.get('imdbID', ''):<12} {r.get('Year', ''):<6} {r.get('Type', ''):<8} {r.get('Title', '')}")
 
 
 def main():
@@ -182,6 +216,10 @@ def main():
     api_key = os.getenv("OMDB_API_KEY")
     if not api_key:
         raise SystemExit("OMDB_API_KEY is required to fetch movie data.")
+
+    if args.command == "search":
+        cmd_search(args, api_key)
+        return
 
     output_root = Path(args.output_dir)
     pages_root = output_root / args.pages_dir
@@ -241,8 +279,25 @@ def main():
             cache_dir=args.cache_dir,
             use_cache=not args.no_cache,
         )
+        file_override = load_override(args.overrides_dir, imdb_id)
+        if file_override:
+            title_hint = file_override.get("Title", (movie or {}).get("Title", ""))
+            print(f"Applying manual override for {imdb_id}: {title_hint}")
+            if movie is None:
+                movie = file_override
+            else:
+                movie.update(file_override)
         if not movie:
-            print(f"Skipping IMDb id {imdb_id}: not found")
+            print(f"Skipping IMDb id {imdb_id}: not found in OMDb (title may exist on IMDb but not yet indexed by OMDb)")
+            row_title = (row.get("title") or "").strip()
+            if row_title:
+                suggestions = search_omdb(row_title, api_key)
+                if suggestions:
+                    print(f"  OMDb search results for '{row_title}':")
+                    for s in suggestions[:5]:
+                        print(f"    {s.get('imdbID', ''):<12} {s.get('Year', ''):<6} {s.get('Type', ''):<8} {s.get('Title', '')}")
+                else:
+                    print(f"  No OMDb results found for '{row_title}'")
             continue
 
         plot = movie.get("Plot", "")
@@ -327,9 +382,7 @@ def main():
             genre_key = movie.get("GenreOverride") or primary_genre(movie)
             by_genre.setdefault(genre_key, []).append((imdb_id, movie))
 
-        sorted_genres = sorted(by_genre.keys(), key=str.lower)
-        genre_index_map = {genre: index for index, genre in enumerate(sorted_genres)}
-        for genre_key in sorted_genres:
+        for genre_key in sorted(by_genre.keys(), key=str.lower):
             genre_section = pages_root / f"{slugify_title(label)}_{slugify_title(genre_key)}_section.pdf"
             render_separator_page(genre_key, genre_section, left_margin_mm=args.left_margin_mm)
             generated_pages.append(genre_section)
@@ -354,9 +407,6 @@ def main():
                     left_margin_mm=args.left_margin_mm,
                     include_poster=not args.no_poster,
                     poster_cache_dir=None if args.no_cache else args.cache_dir,
-                    tab_index=genre_index_map.get(genre_key),
-                    tab_count=len(sorted_genres),
-                    tab_label=genre_key,
                 )
                 generated_pages.append(page_path)
 

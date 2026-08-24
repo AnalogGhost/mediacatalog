@@ -12,7 +12,7 @@ This repository is a Python CLI tool for generating A5 movie catalog pages from 
 Typical commands:
 
 - `python -m pip install -e .` to install the package for development.
-- `python -m media_catalog --input movies.csv` to generate PDFs.
+- `python -m media_catalog generate --input movies.csv` to generate PDFs.
 - `python -m media_catalog --help` to review current CLI options.
 
 ## Coding Style & Naming Conventions

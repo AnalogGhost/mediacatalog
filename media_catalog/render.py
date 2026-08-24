@@ -130,32 +130,6 @@ def _parse_percent(value):
     return None
 
 
-def _genre_tab_color(index):
-    palette = [
-        (0.14, 0.43, 0.78),
-        (0.15, 0.62, 0.38),
-        (0.95, 0.54, 0.15),
-        (0.85, 0.33, 0.31),
-        (0.55, 0.35, 0.64),
-        (0.20, 0.60, 0.70),
-        (0.80, 0.65, 0.15),
-        (0.30, 0.30, 0.30),
-    ]
-    if index is None:
-        return palette[0]
-    return palette[index % len(palette)]
-
-
-def _fit_tab_font_size(label, max_width, font_name, base_size):
-    if not label:
-        return base_size
-    width = stringWidth(label, font_name, base_size)
-    if width <= max_width:
-        return base_size
-    scale = max_width / width
-    return max(4.5, base_size * scale)
-
-
 def _draw_tomato_icon(c, x, y, size_mm, is_fresh):
     size = size_mm * mm
     if is_fresh:
@@ -218,9 +192,6 @@ def render_movie_page(
     left_margin_mm=25.0,
     include_poster=True,
     poster_cache_dir=None,
-    tab_index=None,
-    tab_count=None,
-    tab_label=None,
 ):
     width, height = A5
     left_margin = left_margin_mm * mm
@@ -261,33 +232,6 @@ def render_movie_page(
     series_name = movie.get("SeriesName", "")
     total_seasons = movie.get("totalSeasons", "")
     total_episodes = movie.get("totalEpisodes", "")
-
-    if tab_index is not None and tab_count:
-        tab_width = 9 * mm
-        usable_height = height - top_margin - bottom_margin
-        slot_height = usable_height / tab_count
-        tab_height = max(8 * mm, slot_height - 2 * mm)
-        y_center = height - top_margin - slot_height * (tab_index + 0.5)
-        tab_y = y_center - tab_height / 2
-        tab_x = width - tab_width
-        r, g, b = _genre_tab_color(tab_index)
-        c.setFillColorRGB(r, g, b)
-        c.setStrokeColorRGB(r, g, b)
-        c.rect(tab_x, tab_y, tab_width, tab_height, fill=1, stroke=0)
-        if tab_label:
-            c.saveState()
-            c.setFillColorRGB(1, 1, 1)
-            base_size = 6.2
-            font_size = _fit_tab_font_size(
-                tab_label, tab_height - 2 * mm, "Helvetica-Bold", base_size
-            )
-            c.setFont("Helvetica-Bold", font_size)
-            label = tab_label
-            c.translate(tab_x + tab_width / 2, tab_y + tab_height / 2)
-            c.rotate(90)
-            c.drawCentredString(0, -2, label)
-            c.restoreState()
-        c.setFillColorRGB(0, 0, 0)
 
     rotten = ""
     for rating in ratings:

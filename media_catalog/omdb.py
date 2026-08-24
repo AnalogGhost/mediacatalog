@@ -34,6 +34,18 @@ def fetch_movie(imdb_id, api_key, cache_dir=None, use_cache=True, plot="full"):
     return data
 
 
+def search_omdb(query, api_key, year=None):
+    params = {"s": query, "apikey": api_key}
+    if year:
+        params["y"] = year
+    response = requests.get("https://www.omdbapi.com/", params=params, timeout=20)
+    response.raise_for_status()
+    data = response.json()
+    if data.get("Response") != "True":
+        return []
+    return data.get("Search", [])
+
+
 def fetch_series_episodes_count(imdb_id, api_key, total_seasons, cache_dir=None, use_cache=True):
     if not total_seasons or total_seasons == "N/A":
         return ""

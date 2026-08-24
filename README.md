@@ -7,10 +7,10 @@ License: GPL-3.0-or-later
 ## Features
 
 - One movie per page (A5 PDF) plus optional reflowable EPUB.
-- Genre sections with right-edge colored tabs for quick visual scanning.
 - Series-aware sorting and per-page series labels.
 - Optional list badges (AFI, IMDb Top 250, BFI Sight & Sound, Palme d'Or).
 - Poster caching to speed up repeated runs.
+- OMDb title search and per-title JSON overrides for missing or corrected metadata.
 
 ## Quick Start
 
@@ -53,7 +53,7 @@ https://www.imdb.com/title/tt0068646/,Crime,
 4. Generate PDFs:
 
 ```bash
-python -m media_catalog --input movies.csv
+python -m media_catalog generate --input movies.csv
 ```
 
 Output:
@@ -73,6 +73,15 @@ Output:
 - `--no-poster`: skip poster downloads
 - `--cache-dir`: directory to cache OMDb responses (default: `.cache/omdb`)
 - `--no-cache`: disable cache reads and writes
+- `--overrides-dir`: directory containing `<imdb_id>.json` overrides (default: `.overrides`)
+
+Search OMDb before adding an uncertain title:
+
+```bash
+python -m media_catalog search "Nirvana Unplugged" --year 1993
+```
+
+To correct or supply metadata, add `.overrides/<imdb_id>.json`. Override fields are merged over the OMDb response; a complete override can also supply a title that OMDb does not yet index.
 
 Note: For TV series, the tool may make additional OMDb calls to count total episodes by season. These responses are also cached.
 Poster images are cached under `<cache-dir>/posters` to avoid repeated downloads.
@@ -81,7 +90,7 @@ CSV supports an optional `genre_override` column to control grouping order.
 Add an optional `series` column to group series entries, which are sorted by release year.
 The `title` column is updated on each run with the OMDb title for easier editing.
 Plots are fetched in full and truncated to a length threshold; short plots are only used when the full plot is a placeholder.
-PDF pages include a right-edge color tab per genre, evenly spaced down the edge.
+PDF pages are laid out for A5 printing with a wider left margin for hole punching.
 
 ## Public Repo Tips
 
@@ -93,7 +102,7 @@ PDF pages include a right-edge color tab per genre, evenly spaced down the edge.
 Generate sample PDFs and EPUB from the example CSV:
 
 ```bash
-python -m media_catalog --input movies.example.csv --epub
+python -m media_catalog generate --input movies.example.csv --epub
 ```
 
 Sample files (generated from `movies.example.csv`):
