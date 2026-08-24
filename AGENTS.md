@@ -4,14 +4,16 @@
 This repository is a Python CLI tool for generating A5 movie catalog pages from IMDb links. The core layout:
 
 - `media_catalog/` contains the CLI and PDF generation logic.
-- `requirements.txt` lists runtime dependencies.
+- `pyproject.toml` defines the package, dependencies, and `mediacatalog` console entry point.
+- `media_catalog/data/` contains the bundled reference lists used by the CLI.
 - `README.md` documents usage and options.
 
 ## Build, Test, and Development Commands
-There is no build step. Typical commands:
+Typical commands:
 
-- `pip install -r requirements.txt` to install dependencies.
+- `python -m pip install -e .` to install the package for development.
 - `python -m media_catalog --input movies.csv` to generate PDFs.
+- `python -m media_catalog --help` to review current CLI options.
 
 ## Coding Style & Naming Conventions
 Keep code in standard Python style:
@@ -21,13 +23,13 @@ Keep code in standard Python style:
 - Keep functions small and avoid hidden side effects (pass config explicitly).
 
 ## Testing Guidelines
-Tests are not implemented yet. If added:
+Tests are not implemented yet. Before committing a behavior change, run the CLI against a small sample and inspect the generated PDF or EPUB. If tests are added:
 
 - Place tests under `tests/` mirroring `media_catalog/`.
 - Name files `test_*.py` and run with `pytest`.
 
 ## Commit & Pull Request Guidelines
-No commit history is available yet. Use concise, imperative messages, for example:
+Use concise, imperative messages, for example:
 
 - `Add OMDb metadata fetch`
 - `Refine A5 layout spacing`
