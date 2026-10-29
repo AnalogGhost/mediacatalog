@@ -155,6 +155,16 @@ def build_parser():
         help="EPUB filename (default: catalog.epub)",
     )
     gen.add_argument(
+        "--kobo-epub",
+        action="store_true",
+        help="Also generate a Kobo-formatted EPUB alongside the PDF/EPUB output",
+    )
+    gen.add_argument(
+        "--kobo-epub-name",
+        default=None,
+        help="Kobo EPUB filename (default: derived from --epub-name, e.g. catalog_kobo.epub)",
+    )
+    gen.add_argument(
         "--left-margin-mm",
         type=float,
         default=25.0,
@@ -186,6 +196,11 @@ def build_parser():
     srch.add_argument("--year", help="Optional year to narrow results")
 
     return parser
+
+
+def kobo_epub_filename(epub_name):
+    path = Path(epub_name)
+    return f"{path.stem}_kobo{path.suffix or '.epub'}"
 
 
 def load_override(overrides_dir, imdb_id):
@@ -450,16 +465,30 @@ def main():
     else:
         print("No pages generated.")
 
-    if args.epub:
+    if args.epub or args.kobo_epub:
         if sections:
-            epub_path = output_root / args.epub_name
-            build_epub(
-                sections,
-                epub_path,
-                include_poster=not args.no_poster,
-                poster_cache_dir=None if args.no_cache else args.cache_dir,
-            )
-            print(f"Generated EPUB at {epub_path}")
+            if args.epub:
+                epub_path = output_root / args.epub_name
+                build_epub(
+                    sections,
+                    epub_path,
+                    include_poster=not args.no_poster,
+                    poster_cache_dir=None if args.no_cache else args.cache_dir,
+                )
+                print(f"Generated EPUB at {epub_path}")
+            if args.kobo_epub:
+                kobo_name = args.kobo_epub_name or kobo_epub_filename(args.epub_name)
+                kobo_path = output_root / kobo_name
+                build_epub(
+                    sections,
+                    kobo_path,
+                    include_poster=not args.no_poster,
+                    poster_cache_dir=None if args.no_cache else args.cache_dir,
+                    book_title="MediaCatalog (Kobo Edition)",
+                    identifier="media-catalog-kobo",
+                    kepub=True,
+                )
+                print(f"Generated Kobo EPUB at {kobo_path}")
         else:
             print("No EPUB generated.")
 
